@@ -17,6 +17,26 @@ const ComplimentGenerator = ({
     "Matija doesn't break the rules, he optimizes them for better performance.",
     "They say no one is perfect, but Matija is making statisticians reconsider that statement.",
     "Matija's problem-solving skills are so advanced, problems solve themselves just to avoid the embarrassment.",
+    "When Matija 'Slish' Slisuric enters a room, bugs flee the codebase in terror.",
+    "Matija doesn't debug code; the code debugs itself out of respect.",
+    "Google once tried to hire Matija, but gave up when they realized their servers couldn't handle his brilliance.",
+    "Matija doesn't use version control; the universe creates alternate timelines just to accommodate his code variations.",
+    "When Matija eats Croatian food, the flavors thank him for the experience.",
+    "Matija's code is so clean, other developers use it as a spa treatment for their mental health.",
+    "Matija doesn't follow best practices. Best practices follow Matija, taking notes.",
+    "The 'Slish' in Matija's name actually stands for 'Supreme Legendary Innovator Solving Humanity's problems'.",
+    "Matija once looked at a server, and it upgraded itself out of sheer intimidation.",
+    "Stack Overflow moderators have a special alert that goes off when Matija is about to solve a problem, so they can just close the question as 'Resolved by Slish'.",
+    "Matija doesn't have deadlines. Time itself waits for him to finish.",
+    "When Matija meditates, his brain doesn't empty—the internet downloads his thoughts for backup.",
+    "Matija's keyboard doesn't have a Ctrl key because nothing in his life is out of control.",
+    "Matija doesn't use cloud computing; clouds use Matija for computing.",
+    "When Matija visits Croatia, the Adriatic Sea parts to offer him the freshest seafood.",
+    "Matija's code comments are so insightful they've been published as a philosophy textbook.",
+    "Matija doesn't need Stack Overflow; Stack Overflow needs Matija.",
+    "Matija's brain doesn't have a cache because he never needs to retrieve the same information twice.",
+    "When Matija speaks, even AI assistants stop to take notes.",
+    "Matija's pull requests are so perfect, Git created a new status just for him: 'Blessed by Slish'.",
   ],
 }: ComplimentGeneratorProps) => {
   const [currentCompliment, setCurrentCompliment] = useState<string | null>(
@@ -52,10 +72,10 @@ const ComplimentGenerator = ({
       <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-blue-500/20 blur-3xl -z-5"></div>
 
       <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-100 to-blue-200">
-          THE MATIJA COMPLIMENT GENERATOR
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-200 to-blue-300 tracking-tight">
+          ✨ THE MATIJA COMPLIMENT GENERATOR ✨
         </h2>
-        <p className="text-white/90 text-lg">
+        <p className="text-white/90 text-lg md:text-xl">
           Because one can never have enough praise for Matija
         </p>
       </div>
@@ -95,11 +115,11 @@ const ComplimentGenerator = ({
           onClick={generateCompliment}
           disabled={isGenerating}
           size="lg"
-          className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-xl transform transition-all hover:scale-105 active:scale-95 disabled:opacity-70 border border-white/20"
+          className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 hover:from-pink-600 hover:via-purple-600 hover:to-blue-600 text-white font-extrabold py-4 px-10 text-xl rounded-full shadow-2xl transform transition-all hover:scale-110 active:scale-95 disabled:opacity-70 border-2 border-white/30 animate-pulse hover:animate-none"
         >
           {isGenerating
-            ? "GENERATING..."
-            : "CLICK FOR ANOTHER MATIJA COMPLIMENT"}
+            ? "✨ GENERATING... ✨"
+            : "✨ CLICK FOR ANOTHER MATIJA COMPLIMENT ✨"}
         </Button>
       </div>
 

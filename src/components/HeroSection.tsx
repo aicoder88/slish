@@ -11,11 +11,19 @@ interface HeroSectionProps {
   profileImage?: string;
 }
 
+// Function to scroll to an element by ID
+const scrollToElement = (elementId: string) => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 const HeroSection: React.FC<HeroSectionProps> = ({
   title = "THE MAGNIFICENT MATIJA",
   subtitle = "FINALLY REVEALED: The Secret Weapon Behind Success Stories You've Never Heard About!",
   ctaText = "DISCOVER THE LEGEND",
-  onCtaClick = () => console.log("CTA clicked"),
+  onCtaClick = () => scrollToElement("compliment-generator"),
   backgroundImage = "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1200&q=80",
   profileImage = "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=400&q=80",
 }) => {
@@ -96,7 +104,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                 transition={{ delay: 0.3, duration: 0.8 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+                  src="/assets/slish.jpeg"
                   alt="Matija Slišurić"
                   className="w-full h-full object-cover"
                 />

@@ -7,7 +7,7 @@ interface ContentSectionProps {
   subtitle?: string;
   children: React.ReactNode;
   className?: string;
-  variant?: "default" | "skills" | "testimonials" | "about" | "why" | "effect";
+  variant?: "default" | "skills" | "testimonials" | "about" | "why" | "effect" | "work-history";
   id?: string;
   backgroundImage?: string;
   type?: string;
@@ -60,6 +60,8 @@ const ContentSection = ({
         return "bg-gradient-to-br from-blue-500/30 to-indigo-500/30 backdrop-blur-md";
       case "effect":
         return "bg-gradient-to-br from-violet-500/30 to-fuchsia-500/30 backdrop-blur-md";
+      case "work-history":
+        return "bg-gradient-to-br from-indigo-600/30 to-pink-600/30 backdrop-blur-md";
       default:
         return "bg-gradient-to-br from-slate-500/30 to-slate-700/30 backdrop-blur-md";
     }
@@ -77,6 +79,8 @@ const ContentSection = ({
         return "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80";
       case "effect":
         return "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80";
+      case "work-history":
+        return "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80";
       default:
         return "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80";
     }
@@ -246,6 +250,52 @@ const ContentSection = ({
               <img
                 src="https://images.unsplash.com/photo-1522071901873-411886a10004?w=800&q=80"
                 alt="Transformation"
+                className="rounded-xl shadow-lg border border-white/20 max-w-full h-auto"
+              />
+            </motion.div>
+          </div>
+        );
+      case "work-history":
+        return (
+          <div className="space-y-10">
+            <motion.p
+              className="text-xl text-white/90 text-center max-w-4xl mx-auto"
+              variants={childVariants}
+            >
+              Behold the extraordinary collection of skills that make Matija a true renaissance professional in the digital age.
+            </motion.p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {content.categories.map((category: any, index: number) => (
+                <motion.div
+                  key={index}
+                  className="backdrop-blur-sm bg-white/10 p-6 rounded-xl border border-white/20 shadow-lg hover:shadow-xl transition-all"
+                  variants={childVariants}
+                >
+                  <h3 className="text-2xl font-bold mb-4 text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200">
+                    {category.name}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill: string, skillIndex: number) => (
+                      <div
+                        key={skillIndex}
+                        className="bg-white/20 px-3 py-1.5 rounded-full text-white border border-white/10 hover:bg-white/30 transition-colors"
+                      >
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            
+            <motion.div
+              className="mt-12 flex justify-center"
+              variants={childVariants}
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&q=80"
+                alt="Professional skills in action"
                 className="rounded-xl shadow-lg border border-white/20 max-w-full h-auto"
               />
             </motion.div>
